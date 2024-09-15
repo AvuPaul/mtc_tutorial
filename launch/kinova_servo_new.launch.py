@@ -78,34 +78,50 @@ def launch_setup(context, *args, **kwargs):
 
     moveit_config.moveit_cpp.update({"use_sim_time": use_sim_time.perform(context) == "true"})
 
-    move_group_node = Node(
-        package="moveit_ros_move_group",
-        executable="move_group",
-        output="screen",
-        parameters=[
-            moveit_config.to_dict(),
-        ],
-    )
+    # move_group_node = Node(
+    #     package="moveit_ros_move_group",
+    #     executable="move_group",
+    #     output="screen",
+    #     parameters=[
+    #         moveit_config.to_dict(),
+    #     ],
+    # )
 
-    # Static TF
-    static_tf = Node(
-        package="tf2_ros",
-        executable="static_transform_publisher",
-        name="static_transform_publisher",
+    # RViz
+    rviz_config_file = (
+        get_package_share_directory("mtc_tutorial") + "/rviz/gen3_servo.rviz"
+    )
+    rviz_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        name="rviz2",
         output="log",
-        arguments=["0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "world", "base_link"],
-    )
-
-    # Publish TF
-    robot_state_publisher = Node(
-        package="robot_state_publisher",
-        executable="robot_state_publisher",
-        name="robot_state_publisher",
-        output="both",
+        arguments=["-d", rviz_config_file],
         parameters=[
             moveit_config.robot_description,
+            moveit_config.robot_description_semantic,
         ],
     )
+
+    # # Static TF
+    # static_tf = Node(
+    #     package="tf2_ros",
+    #     executable="static_transform_publisher",
+    #     name="static_transform_publisher",
+    #     output="log",
+    #     arguments=["0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "world", "base_link"],
+    # )
+
+    # # Publish TF
+    # robot_state_publisher = Node(
+    #     package="robot_state_publisher",
+    #     executable="robot_state_publisher",
+    #     name="robot_state_publisher",
+    #     output="both",
+    #     parameters=[
+    #         moveit_config.robot_description,
+    #     ],
+    # )
 
     # ros2_control using FakeSystem as hardware
     ros2_controllers_path = os.path.join(
@@ -116,7 +132,8 @@ def launch_setup(context, *args, **kwargs):
     ros2_control_node = Node(
         package="controller_manager",
         executable="ros2_control_node",
-        parameters=[moveit_config.to_dict(), ros2_controllers_path],
+        # parameters=[moveit_config.to_dict(), ros2_controllers_path],
+        parameters=[moveit_config.robot_description, ros2_controllers_path],
         output="both",
     )
 
@@ -124,44 +141,6 @@ def launch_setup(context, *args, **kwargs):
         package="controller_manager",
         executable="spawner",
         arguments=["joint_trajectory_controller", "-c", "/controller_manager"],
-    )
-
-    robot_pos_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["twist_controller", "--inactive", "-c", "/controller_manager"],
-    )
-
-    robot_hand_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["robotiq_gripper_controller", "-c", "/controller_manager"],
-        # condition=IfCondition(use_internal_bus_gripper_comm),
-    )
-
-    fault_controller_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["fault_controller", "-c", "/controller_manager"],
-    )
-
-    # rviz with moveit configuration
-    rviz_config_file = (
-        get_package_share_directory("mtc_tutorial")
-        + "/rviz/gen3.rviz"
-    )
-    rviz_node = Node(
-        package="rviz2",
-        condition=IfCondition(launch_rviz),
-        executable="rviz2",
-        name="rviz2_moveit",
-        output="log",
-        arguments=["-d", rviz_config_file],
-        parameters=[
-            moveit_config.robot_description,
-            moveit_config.robot_description_semantic,
-            moveit_config.robot_description_kinematics,
-        ],
     )
 
     joint_state_broadcaster_spawner = Node(
@@ -172,7 +151,20 @@ def launch_setup(context, *args, **kwargs):
             "--controller-manager",
             "/controller_manager",
         ],
+        # arguments=[
+        #     "joint_state_broadcaster",
+        #     "--controller-manager-timeout",
+        #     "300",
+        #     "--controller-manager",
+        #     "/controller_manager",
+        # ],
     )
+
+    # robot_pos_controller_spawner = Node(
+    #     package="controller_manager",
+    #     executable="spawner",
+    #     arguments=["twist_controller", "--inactive", "-c", "/controller_manager"],
+    # )
 
     # Delay rviz start after `joint_state_broadcaster`
     delay_rviz_after_joint_state_broadcaster_spawner = RegisterEventHandler(
@@ -243,15 +235,15 @@ def launch_setup(context, *args, **kwargs):
 
     nodes_to_start = [
         ros2_control_node,
-        robot_state_publisher,
+        # robot_state_publisher,
         joint_state_broadcaster_spawner,
         delay_rviz_after_joint_state_broadcaster_spawner,
         robot_traj_controller_spawner,
-        robot_pos_controller_spawner,
-        robot_hand_controller_spawner,
-        fault_controller_spawner,
-        move_group_node,
-        static_tf,
+        # robot_pos_controller_spawner,
+        # robot_hand_controller_spawner,
+        # fault_controller_spawner,
+        # move_group_node,
+        # static_tf,
         servo_node,
         container,
     ]

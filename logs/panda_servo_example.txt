@@ -1,0 +1,97 @@
+ros2 launch moveit_servo servo_example.launch.py 
+[INFO] [launch]: All log files can be found below /home/developer/.ros/log/2024-09-15-19-02-45-925536-kinova-moveit-265003
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [rviz2-1]: process started with pid [265020]
+[INFO] [ros2_control_node-2]: process started with pid [265022]
+[INFO] [spawner-3]: process started with pid [265024]
+[INFO] [spawner-4]: process started with pid [265026]
+[INFO] [servo_node_main-5]: process started with pid [265028]
+[INFO] [component_container_mt-6]: process started with pid [265030]
+[ros2_control_node-2] [WARN] [1726426966.229304045] [controller_manager]: [Deprecated] Passing the robot description parameter directly to the control_manager node is deprecated. Use '~/robot_description' topic from 'robot_state_publisher' instead.
+[ros2_control_node-2] [INFO] [1726426966.229867424] [resource_manager]: Loading hardware 'PandaFakeSystem' 
+[ros2_control_node-2] [INFO] [1726426966.231048872] [resource_manager]: Initialize hardware 'PandaFakeSystem' 
+[ros2_control_node-2] [INFO] [1726426966.231264134] [resource_manager]: Successful initialization of hardware 'PandaFakeSystem'
+[ros2_control_node-2] [INFO] [1726426966.231304152] [resource_manager]: Loading hardware 'PandaHandFakeSystem' 
+[ros2_control_node-2] [INFO] [1726426966.231320473] [resource_manager]: Initialize hardware 'PandaHandFakeSystem' 
+[ros2_control_node-2] [INFO] [1726426966.231335376] [resource_manager]: Successful initialization of hardware 'PandaHandFakeSystem'
+[ros2_control_node-2] [INFO] [1726426966.231394330] [resource_manager]: 'configure' hardware 'PandaHandFakeSystem' 
+[ros2_control_node-2] [INFO] [1726426966.231401255] [resource_manager]: Successful 'configure' of hardware 'PandaHandFakeSystem'
+[ros2_control_node-2] [INFO] [1726426966.231404430] [resource_manager]: 'activate' hardware 'PandaHandFakeSystem' 
+[ros2_control_node-2] [INFO] [1726426966.231410836] [resource_manager]: Successful 'activate' of hardware 'PandaHandFakeSystem'
+[ros2_control_node-2] [INFO] [1726426966.231413707] [resource_manager]: 'configure' hardware 'PandaFakeSystem' 
+[ros2_control_node-2] [INFO] [1726426966.231416554] [resource_manager]: Successful 'configure' of hardware 'PandaFakeSystem'
+[ros2_control_node-2] [INFO] [1726426966.231421459] [resource_manager]: 'activate' hardware 'PandaFakeSystem' 
+[ros2_control_node-2] [INFO] [1726426966.231424256] [resource_manager]: Successful 'activate' of hardware 'PandaFakeSystem'
+[ros2_control_node-2] [INFO] [1726426966.235742321] [controller_manager]: update rate is 100 Hz
+[ros2_control_node-2] [INFO] [1726426966.236072467] [controller_manager]: Successful set up FIFO RT scheduling policy with priority 50.
+[servo_node_main-5] [WARN] [1726426966.238825862] [moveit_servo.servo_node]: Intra-process communication is disabled, consider enabling it by adding: 
+[servo_node_main-5] extra_arguments=[{'use_intra_process_comms' : True}]
+[servo_node_main-5] to the Servo composable node in the launch file
+[rviz2-1] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-developer'
+[servo_node_main-5] [INFO] [1726426966.282316201] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.0414863 seconds
+[servo_node_main-5] [INFO] [1726426966.282417634] [moveit_robot_model.robot_model]: Loading robot model 'panda'...
+[servo_node_main-5] [INFO] [1726426966.324283855] [moveit_ros.current_state_monitor]: Listening to joint states on topic '/joint_states'
+[servo_node_main-5] [INFO] [1726426966.328291161] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[servo_node_main-5] [INFO] [1726426966.328331718] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[servo_node_main-5] [INFO] [1726426966.329096555] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/planning_scene'
+[servo_node_main-5] [INFO] [1726426966.329138938] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[servo_node_main-5] [INFO] [1726426966.329713393] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'collision_object'
+[servo_node_main-5] [INFO] [1726426966.330151262] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[servo_node_main-5] [WARN] [1726426966.332197426] [moveit.ros.occupancy_map_monitor.middleware_handle]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[servo_node_main-5] [ERROR] [1726426966.332278009] [moveit.ros.occupancy_map_monitor.middleware_handle]: No 3D sensor plugin(s) defined for octomap updates
+[servo_node_main-5] [INFO] [1726426966.334776373] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Publishing maintained planning scene on '/servo_node/publish_planning_scene'
+[component_container_mt-6] [INFO] [1726426966.439291533] [moveit_servo_demo_container]: Load Library: /opt/ros/humble/lib/librobot_state_publisher_node.so
+[component_container_mt-6] [INFO] [1726426966.444176715] [moveit_servo_demo_container]: Found class: rclcpp_components::NodeFactoryTemplate<robot_state_publisher::RobotStatePublisher>
+[component_container_mt-6] [INFO] [1726426966.444299606] [moveit_servo_demo_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<robot_state_publisher::RobotStatePublisher>
+[component_container_mt-6] [INFO] [1726426966.477982499] [robot_state_publisher]: got segment panda_hand
+[component_container_mt-6] [INFO] [1726426966.478122777] [robot_state_publisher]: got segment panda_leftfinger
+[component_container_mt-6] [INFO] [1726426966.478134483] [robot_state_publisher]: got segment panda_link0
+[component_container_mt-6] [INFO] [1726426966.478140336] [robot_state_publisher]: got segment panda_link1
+[component_container_mt-6] [INFO] [1726426966.478145165] [robot_state_publisher]: got segment panda_link2
+[component_container_mt-6] [INFO] [1726426966.478149845] [robot_state_publisher]: got segment panda_link3
+[component_container_mt-6] [INFO] [1726426966.478154497] [robot_state_publisher]: got segment panda_link4
+[component_container_mt-6] [INFO] [1726426966.478159117] [robot_state_publisher]: got segment panda_link5
+[component_container_mt-6] [INFO] [1726426966.478163826] [robot_state_publisher]: got segment panda_link6
+[component_container_mt-6] [INFO] [1726426966.478168324] [robot_state_publisher]: got segment panda_link7
+[component_container_mt-6] [INFO] [1726426966.478173115] [robot_state_publisher]: got segment panda_link8
+[component_container_mt-6] [INFO] [1726426966.478177745] [robot_state_publisher]: got segment panda_rightfinger
+[servo_node_main-5] [WARN] [1726426966.481414490] [moveit_ros.current_state_monitor]: Unable to update multi-DOF joint 'virtual_joint':Failure to lookup transform between 'world'and 'panda_link0' with TF exception: "world" passed to lookupTransform argument target_frame does not exist. 
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot_state_publisher' in container '/moveit_servo_demo_container'
+[component_container_mt-6] [INFO] [1726426966.485134777] [moveit_servo_demo_container]: Load Library: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
+[component_container_mt-6] [INFO] [1726426966.485775813] [moveit_servo_demo_container]: Found class: rclcpp_components::NodeFactoryTemplate<tf2_ros::StaticTransformBroadcasterNode>
+[component_container_mt-6] [INFO] [1726426966.485805634] [moveit_servo_demo_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<tf2_ros::StaticTransformBroadcasterNode>
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/static_tf2_broadcaster' in container '/moveit_servo_demo_container'
+[component_container_mt-6] [INFO] [1726426966.492383262] [moveit_servo_demo_container]: Load Library: /ros2_ws/install/moveit_servo/lib/libservo_controller_input.so
+[component_container_mt-6] [INFO] [1726426966.495027145] [moveit_servo_demo_container]: Found class: rclcpp_components::NodeFactoryTemplate<moveit_servo::JoyToServoPub>
+[component_container_mt-6] [INFO] [1726426966.495069836] [moveit_servo_demo_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<moveit_servo::JoyToServoPub>
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/controller_to_servo_node' in container '/moveit_servo_demo_container'
+[component_container_mt-6] [INFO] [1726426966.502696359] [moveit_servo_demo_container]: Load Library: /opt/ros/humble/lib/libjoy.so
+[component_container_mt-6] [INFO] [1726426966.509020846] [moveit_servo_demo_container]: Found class: rclcpp_components::NodeFactoryTemplate<joy::Joy>
+[component_container_mt-6] [INFO] [1726426966.509060654] [moveit_servo_demo_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<joy::Joy>
+[ros2_control_node-2] [INFO] [1726426966.546631460] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[ros2_control_node-2] [INFO] [1726426966.557446507] [controller_manager]: Loading controller 'panda_arm_controller'
+[ros2_control_node-2] [WARN] [1726426966.564795417] [panda_arm_controller]: [Deprecated]: "allow_nonzero_velocity_at_trajectory_end" is set to true. The default behavior will change to false.
+[spawner-3] [INFO] [1726426966.567445949] [spawner_joint_state_broadcaster]: Loaded joint_state_broadcaster
+[ros2_control_node-2] [INFO] [1726426966.568007325] [controller_manager]: Configuring controller 'joint_state_broadcaster'
+[ros2_control_node-2] [INFO] [1726426966.568095950] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+[spawner-4] [INFO] [1726426966.576075580] [spawner_panda_arm_controller]: Loaded panda_arm_controller
+[ros2_control_node-2] [INFO] [1726426966.576635528] [controller_manager]: Configuring controller 'panda_arm_controller'
+[ros2_control_node-2] [INFO] [1726426966.576839438] [panda_arm_controller]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[ros2_control_node-2] [INFO] [1726426966.576865117] [panda_arm_controller]: Command interfaces are [position] and state interfaces are [position velocity].
+[ros2_control_node-2] [INFO] [1726426966.576891729] [panda_arm_controller]: Using 'splines' interpolation method.
+[ros2_control_node-2] [INFO] [1726426966.577246356] [panda_arm_controller]: Controller state will be published at 50.00 Hz.
+[ros2_control_node-2] [INFO] [1726426966.578908626] [panda_arm_controller]: Action status changes will be monitored at 20.00 Hz.
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/joy_node' in container '/moveit_servo_demo_container'
+[component_container_mt-6] [INFO] [1726426966.602258860] [joy_node]: Opened joystick: Xbox Series X Controller.  deadzone: 0.050000
+[spawner-3] [INFO] [1726426966.606988942] [spawner_joint_state_broadcaster]: Configured and activated joint_state_broadcaster
+[spawner-4] [INFO] [1726426966.627041921] [spawner_panda_arm_controller]: Configured and activated panda_arm_controller
+[rviz2-1] [INFO] [1726426966.727488539] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-1] [INFO] [1726426966.728121042] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-1] [INFO] [1726426966.759033212] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [spawner-3]: process has finished cleanly [pid 265024]
+[INFO] [spawner-4]: process has finished cleanly [pid 265026]
+[rviz2-1] [INFO] [1726426966.976285062] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.0222285 seconds
+[rviz2-1] [INFO] [1726426966.976326225] [moveit_robot_model.robot_model]: Loading robot model 'panda'...
+[rviz2-1] [WARN] [1726426966.988928133] [moveit_ros.robot_model_loader]: No kinematics plugins defined. Fill and load kinematics.yaml!
+[rviz2-1] [INFO] [1726426967.020849167] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[rviz2-1] [INFO] [1726426967.028573975] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/servo_node/publish_planning_scene'

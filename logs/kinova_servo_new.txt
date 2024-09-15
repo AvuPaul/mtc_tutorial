@@ -1,0 +1,251 @@
+ros2 launch mtc_tutorial kinova_servo_new.launch.py   robot_ip:=yyy.yyy.yyy.yyy  use_fake_hardware:=true
+[INFO] [launch]: All log files can be found below /home/developer/.ros/log/2024-09-15-18-59-10-584466-kinova-moveit-262090
+[INFO] [launch]: Default logging verbosity is set to INFO
+[ERROR] [launch]: Caught exception in launch (see debug for traceback): name 'robot_pos_controller_spawner' is not defined
+developer@kinova-moveit:/ros2_ws$ ros2 launch mtc_tutorial kinova_servo_new.launch.py   robot_ip:=yyy.yyy.yyy.yyy  use_fake_hardware:=true
+[INFO] [launch]: All log files can be found below /home/developer/.ros/log/2024-09-15-18-59-24-770862-kinova-moveit-262271
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [ros2_control_node-1]: process started with pid [262285]
+[INFO] [spawner-2]: process started with pid [262287]
+[INFO] [servo_node_main-3]: process started with pid [262289]
+[INFO] [component_container_mt-4]: process started with pid [262291]
+[ros2_control_node-1] [WARN] [1726426765.046644256] [controller_manager]: [Deprecated] Passing the robot description parameter directly to the control_manager node is deprecated. Use '~/robot_description' topic from 'robot_state_publisher' instead.
+[ros2_control_node-1] [INFO] [1726426765.047122666] [resource_manager]: Loading hardware 'KortexMultiInterfaceHardware' 
+[ros2_control_node-1] [INFO] [1726426765.047885642] [resource_manager]: Initialize hardware 'KortexMultiInterfaceHardware' 
+[ros2_control_node-1] [WARN] [1726426765.047917489] [mock_generic_system]: Parameter 'fake_sensor_commands' has been deprecated from usage. Use'mock_sensor_commands' instead.
+[ros2_control_node-1] [WARN] [1726426765.047972190] [mock_generic_system]: Parsing of optional initial interface values failed or uses a deprecated format. Add initial values for every state interface in the ros2_control.xacro. For example: 
+[ros2_control_node-1] <state_interface name="velocity"> 
+[ros2_control_node-1]   <param name="initial_value">0.0</param> 
+[ros2_control_node-1] </state_interface>
+[ros2_control_node-1] [INFO] [1726426765.047983545] [resource_manager]: Successful initialization of hardware 'KortexMultiInterfaceHardware'
+[ros2_control_node-1] [INFO] [1726426765.048010144] [resource_manager]: Loading hardware 'RobotiqGripperHardwareInterface' 
+[ros2_control_node-1] [INFO] [1726426765.048019367] [resource_manager]: Initialize hardware 'RobotiqGripperHardwareInterface' 
+[ros2_control_node-1] [WARN] [1726426765.048029865] [mock_generic_system]: Parameter 'fake_sensor_commands' has been deprecated from usage. Use'mock_sensor_commands' instead.
+[ros2_control_node-1] [INFO] [1726426765.048044300] [resource_manager]: Successful initialization of hardware 'RobotiqGripperHardwareInterface'
+[ros2_control_node-1] [INFO] [1726426765.048098942] [resource_manager]: 'configure' hardware 'RobotiqGripperHardwareInterface' 
+[ros2_control_node-1] [INFO] [1726426765.048106746] [resource_manager]: Successful 'configure' of hardware 'RobotiqGripperHardwareInterface'
+[ros2_control_node-1] [INFO] [1726426765.048111585] [resource_manager]: 'activate' hardware 'RobotiqGripperHardwareInterface' 
+[ros2_control_node-1] [INFO] [1726426765.048114660] [resource_manager]: Successful 'activate' of hardware 'RobotiqGripperHardwareInterface'
+[ros2_control_node-1] [INFO] [1726426765.048117272] [resource_manager]: 'configure' hardware 'KortexMultiInterfaceHardware' 
+[ros2_control_node-1] [INFO] [1726426765.048119803] [resource_manager]: Successful 'configure' of hardware 'KortexMultiInterfaceHardware'
+[ros2_control_node-1] [WARN] [1726426765.048124086] [resource_manager]: (hardware 'KortexMultiInterfaceHardware'): 'robotiq_85_left_knuckle_joint/position' state interface already in available list. This can happen due to multiple calls to 'configure'
+[ros2_control_node-1] [WARN] [1726426765.048126370] [resource_manager]: (hardware 'KortexMultiInterfaceHardware'): 'robotiq_85_left_knuckle_joint/velocity' state interface already in available list. This can happen due to multiple calls to 'configure'
+[ros2_control_node-1] [WARN] [1726426765.048129618] [resource_manager]: (hardware 'KortexMultiInterfaceHardware'): 'robotiq_85_left_knuckle_joint/position' command interface already in available list. This can happen due to multiple calls to 'configure'
+[ros2_control_node-1] [INFO] [1726426765.048131293] [resource_manager]: 'activate' hardware 'KortexMultiInterfaceHardware' 
+[ros2_control_node-1] [INFO] [1726426765.048133777] [resource_manager]: Successful 'activate' of hardware 'KortexMultiInterfaceHardware'
+[ros2_control_node-1] [INFO] [1726426765.051719846] [controller_manager]: update rate is 1000 Hz
+[ros2_control_node-1] [INFO] [1726426765.052294092] [controller_manager]: Successful set up FIFO RT scheduling policy with priority 50.
+[servo_node_main-3] [WARN] [1726426765.077739083] [moveit_servo.servo_node]: Intra-process communication is disabled, consider enabling it by adding: 
+[servo_node_main-3] extra_arguments=[{'use_intra_process_comms' : True}]
+[servo_node_main-3] to the Servo composable node in the launch file
+[servo_node_main-3] [INFO] [1726426765.119496133] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.0397613 seconds
+[servo_node_main-3] [INFO] [1726426765.119572493] [moveit_robot_model.robot_model]: Loading robot model 'gen3'...
+[servo_node_main-3] [INFO] [1726426765.119591331] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[component_container_mt-4] [INFO] [1726426765.267371262] [moveit_servo_demo_container]: Load Library: /opt/ros/humble/lib/librobot_state_publisher_node.so
+[component_container_mt-4] [INFO] [1726426765.271258105] [moveit_servo_demo_container]: Found class: rclcpp_components::NodeFactoryTemplate<robot_state_publisher::RobotStatePublisher>
+[component_container_mt-4] [INFO] [1726426765.271358527] [moveit_servo_demo_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<robot_state_publisher::RobotStatePublisher>
+[component_container_mt-4] [INFO] [1726426765.304062722] [robot_state_publisher]: got segment base_link
+[component_container_mt-4] [INFO] [1726426765.304302124] [robot_state_publisher]: got segment bracelet_link
+[component_container_mt-4] [INFO] [1726426765.304316148] [robot_state_publisher]: got segment end_effector_link
+[component_container_mt-4] [INFO] [1726426765.304320108] [robot_state_publisher]: got segment forearm_link
+[component_container_mt-4] [INFO] [1726426765.304324400] [robot_state_publisher]: got segment half_arm_1_link
+[component_container_mt-4] [INFO] [1726426765.304327862] [robot_state_publisher]: got segment half_arm_2_link
+[component_container_mt-4] [INFO] [1726426765.304331479] [robot_state_publisher]: got segment robotiq_85_base_link
+[component_container_mt-4] [INFO] [1726426765.304335219] [robot_state_publisher]: got segment robotiq_85_left_finger_link
+[component_container_mt-4] [INFO] [1726426765.304338851] [robot_state_publisher]: got segment robotiq_85_left_finger_tip_link
+[component_container_mt-4] [INFO] [1726426765.304343618] [robot_state_publisher]: got segment robotiq_85_left_inner_knuckle_link
+[component_container_mt-4] [INFO] [1726426765.304347366] [robot_state_publisher]: got segment robotiq_85_left_knuckle_link
+[component_container_mt-4] [INFO] [1726426765.304351155] [robot_state_publisher]: got segment robotiq_85_right_finger_link
+[component_container_mt-4] [INFO] [1726426765.304355490] [robot_state_publisher]: got segment robotiq_85_right_finger_tip_link
+[component_container_mt-4] [INFO] [1726426765.304358918] [robot_state_publisher]: got segment robotiq_85_right_inner_knuckle_link
+[component_container_mt-4] [INFO] [1726426765.304362275] [robot_state_publisher]: got segment robotiq_85_right_knuckle_link
+[component_container_mt-4] [INFO] [1726426765.304365589] [robot_state_publisher]: got segment shoulder_link
+[component_container_mt-4] [INFO] [1726426765.304369657] [robot_state_publisher]: got segment spherical_wrist_1_link
+[component_container_mt-4] [INFO] [1726426765.304374606] [robot_state_publisher]: got segment spherical_wrist_2_link
+[component_container_mt-4] [INFO] [1726426765.304378057] [robot_state_publisher]: got segment world
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot_state_publisher' in container '/moveit_servo_demo_container'
+[component_container_mt-4] [INFO] [1726426765.312330370] [moveit_servo_demo_container]: Load Library: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
+[component_container_mt-4] [INFO] [1726426765.312968576] [moveit_servo_demo_container]: Found class: rclcpp_components::NodeFactoryTemplate<tf2_ros::StaticTransformBroadcasterNode>
+[component_container_mt-4] [INFO] [1726426765.313000858] [moveit_servo_demo_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<tf2_ros::StaticTransformBroadcasterNode>
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/static_tf2_broadcaster' in container '/moveit_servo_demo_container'
+[component_container_mt-4] [ERROR] [1726426765.320270495] [moveit_servo_demo_container]: Failed to find class with the requested plugin name 'moveit_servo_kinova::JoyToServoPub' in the loaded library
+[ERROR] [launch_ros.actions.load_composable_nodes]: Failed to load node 'controller_to_servo_node' of type 'moveit_servo_kinova::JoyToServoPub' in container '/moveit_servo_demo_container': Failed to find class with the requested plugin name.
+[component_container_mt-4] [INFO] [1726426765.323635235] [moveit_servo_demo_container]: Load Library: /opt/ros/humble/lib/libjoy.so
+[component_container_mt-4] [INFO] [1726426765.334282149] [moveit_servo_demo_container]: Found class: rclcpp_components::NodeFactoryTemplate<joy::Joy>
+[component_container_mt-4] [INFO] [1726426765.334563153] [moveit_servo_demo_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<joy::Joy>
+[ros2_control_node-1] [INFO] [1726426765.404845004] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[spawner-2] [INFO] [1726426765.426281558] [spawner_joint_state_broadcaster]: Loaded joint_state_broadcaster
+[ros2_control_node-1] [INFO] [1726426765.428017250] [controller_manager]: Configuring controller 'joint_state_broadcaster'
+[ros2_control_node-1] [INFO] [1726426765.428258883] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+[spawner-2] [INFO] [1726426765.439278563] [spawner_joint_state_broadcaster]: Configured and activated joint_state_broadcaster
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/joy_node' in container '/moveit_servo_demo_container'
+[component_container_mt-4] [INFO] [1726426765.464569861] [joy_node]: Opened joystick: Xbox Series X Controller.  deadzone: 0.050000
+[servo_node_main-3] [INFO] [1726426765.519739973] [moveit_ros.current_state_monitor]: Listening to joint states on topic '/joint_states'
+[servo_node_main-3] [INFO] [1726426765.523564349] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[servo_node_main-3] [INFO] [1726426765.523641851] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[servo_node_main-3] [INFO] [1726426765.524119400] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/planning_scene'
+[servo_node_main-3] [INFO] [1726426765.524136329] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[servo_node_main-3] [INFO] [1726426765.524358518] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'collision_object'
+[servo_node_main-3] [INFO] [1726426765.524594937] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[servo_node_main-3] [WARN] [1726426765.525851986] [moveit.ros.occupancy_map_monitor.middleware_handle]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[servo_node_main-3] [ERROR] [1726426765.525887217] [moveit.ros.occupancy_map_monitor.middleware_handle]: No 3D sensor plugin(s) defined for octomap updates
+[servo_node_main-3] [INFO] [1726426765.670574292] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Publishing maintained planning scene on '/servo_node/publish_planning_scene'
+[INFO] [spawner-2]: process has finished cleanly [pid 262287]
+[INFO] [rviz2-5]: process started with pid [262385]
+[rviz2-5] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-developer'
+[rviz2-5] [INFO] [1726426766.289868523] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-5] [INFO] [1726426766.290138406] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-5] [INFO] [1726426766.312118859] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-5] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occurred with plugin factory for class rviz_default_plugins::displays::InteractiveMarkerDisplay. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+[rviz2-5]          at line 253 in /opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp
+[rviz2-5] [ERROR] [1726426769.466238170] [moveit_ros_visualization.motion_planning_frame]: Action server: /recognize_objects not available
+[rviz2-5] [INFO] [1726426769.688011826] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.0298351 seconds
+[rviz2-5] [INFO] [1726426769.688121075] [moveit_robot_model.robot_model]: Loading robot model 'gen3'...
+[rviz2-5] [INFO] [1726426769.688139070] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[rviz2-5] [WARN] [1726426769.855330848] [moveit_ros.robot_model_loader]: No kinematics plugins defined. Fill and load kinematics.yaml!
+[rviz2-5] [INFO] [1726426770.140592037] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[rviz2-5] [INFO] [1726426770.142234905] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/monitored_planning_scene'
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[rviz2-5] [INFO] [1726426855.488692692] [rclcpp]: signal_handler(signum=2)
+[INFO] [ros2_control_node-1]: process has finished cleanly [pid 262285]
+[component_container_mt-4] [INFO] [1726426855.488695839] [rclcpp]: signal_handler(signum=2)
+[INFO] [servo_node_main-3]: process has finished cleanly [pid 262289]
+[servo_node_main-3] [INFO] [1726426855.488700169] [rclcpp]: signal_handler(signum=2)
+[ros2_control_node-1] [INFO] [1726426855.488700084] [rclcpp]: signal_handler(signum=2)
+[servo_node_main-3] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[servo_node_main-3]          at line 127 in ./src/class_loader.cpp
+[servo_node_main-3] [INFO] [1726426855.530245539] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Stopped publishing maintained planning scene.
+[servo_node_main-3] [INFO] [1726426855.531694818] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Stopping world geometry monitor
+[servo_node_main-3] [INFO] [1726426855.532996209] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Stopping planning scene monitor
+[rviz2-5] [INFO] [1726426855.535171715] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Stopping planning scene monitor
+[INFO] [component_container_mt-4]: process has finished cleanly [pid 262291]
+[INFO] [rviz2-5]: process has finished cleanly [pid 262385]
+developer@kinova-moveit:/ros2_ws$ ros2 launch mtc_tutorial kinova_servo_new.launch.py   robot_ip:=yyy.yyy.yyy.yyy  use_fake_hardware:=true
+[INFO] [launch]: All log files can be found below /home/developer/.ros/log/2024-09-15-19-00-56-845681-kinova-moveit-263518
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [ros2_control_node-1]: process started with pid [263529]
+[INFO] [spawner-2]: process started with pid [263531]
+[INFO] [spawner-3]: process started with pid [263533]
+[INFO] [servo_node_main-4]: process started with pid [263535]
+[INFO] [component_container_mt-5]: process started with pid [263537]
+[ros2_control_node-1] [WARN] [1726426857.146474849] [controller_manager]: [Deprecated] Passing the robot description parameter directly to the control_manager node is deprecated. Use '~/robot_description' topic from 'robot_state_publisher' instead.
+[ros2_control_node-1] [INFO] [1726426857.147319861] [resource_manager]: Loading hardware 'KortexMultiInterfaceHardware' 
+[ros2_control_node-1] [INFO] [1726426857.148809304] [resource_manager]: Initialize hardware 'KortexMultiInterfaceHardware' 
+[ros2_control_node-1] [WARN] [1726426857.148869351] [mock_generic_system]: Parameter 'fake_sensor_commands' has been deprecated from usage. Use'mock_sensor_commands' instead.
+[ros2_control_node-1] [WARN] [1726426857.148945292] [mock_generic_system]: Parsing of optional initial interface values failed or uses a deprecated format. Add initial values for every state interface in the ros2_control.xacro. For example: 
+[ros2_control_node-1] <state_interface name="velocity"> 
+[ros2_control_node-1]   <param name="initial_value">0.0</param> 
+[ros2_control_node-1] </state_interface>
+[ros2_control_node-1] [INFO] [1726426857.148965404] [resource_manager]: Successful initialization of hardware 'KortexMultiInterfaceHardware'
+[ros2_control_node-1] [INFO] [1726426857.149015621] [resource_manager]: Loading hardware 'RobotiqGripperHardwareInterface' 
+[ros2_control_node-1] [INFO] [1726426857.149037578] [resource_manager]: Initialize hardware 'RobotiqGripperHardwareInterface' 
+[ros2_control_node-1] [WARN] [1726426857.149059518] [mock_generic_system]: Parameter 'fake_sensor_commands' has been deprecated from usage. Use'mock_sensor_commands' instead.
+[ros2_control_node-1] [INFO] [1726426857.149091411] [resource_manager]: Successful initialization of hardware 'RobotiqGripperHardwareInterface'
+[ros2_control_node-1] [INFO] [1726426857.149189825] [resource_manager]: 'configure' hardware 'RobotiqGripperHardwareInterface' 
+[ros2_control_node-1] [INFO] [1726426857.149208191] [resource_manager]: Successful 'configure' of hardware 'RobotiqGripperHardwareInterface'
+[ros2_control_node-1] [INFO] [1726426857.149219498] [resource_manager]: 'activate' hardware 'RobotiqGripperHardwareInterface' 
+[ros2_control_node-1] [INFO] [1726426857.149228514] [resource_manager]: Successful 'activate' of hardware 'RobotiqGripperHardwareInterface'
+[ros2_control_node-1] [INFO] [1726426857.149234561] [resource_manager]: 'configure' hardware 'KortexMultiInterfaceHardware' 
+[ros2_control_node-1] [INFO] [1726426857.149240259] [resource_manager]: Successful 'configure' of hardware 'KortexMultiInterfaceHardware'
+[ros2_control_node-1] [WARN] [1726426857.149248868] [resource_manager]: (hardware 'KortexMultiInterfaceHardware'): 'robotiq_85_left_knuckle_joint/position' state interface already in available list. This can happen due to multiple calls to 'configure'
+[ros2_control_node-1] [WARN] [1726426857.149254085] [resource_manager]: (hardware 'KortexMultiInterfaceHardware'): 'robotiq_85_left_knuckle_joint/velocity' state interface already in available list. This can happen due to multiple calls to 'configure'
+[ros2_control_node-1] [WARN] [1726426857.149260796] [resource_manager]: (hardware 'KortexMultiInterfaceHardware'): 'robotiq_85_left_knuckle_joint/position' command interface already in available list. This can happen due to multiple calls to 'configure'
+[ros2_control_node-1] [INFO] [1726426857.149265147] [resource_manager]: 'activate' hardware 'KortexMultiInterfaceHardware' 
+[ros2_control_node-1] [INFO] [1726426857.149270900] [resource_manager]: Successful 'activate' of hardware 'KortexMultiInterfaceHardware'
+[ros2_control_node-1] [INFO] [1726426857.152383767] [controller_manager]: update rate is 1000 Hz
+[servo_node_main-4] [WARN] [1726426857.152602260] [moveit_servo.servo_node]: Intra-process communication is disabled, consider enabling it by adding: 
+[servo_node_main-4] extra_arguments=[{'use_intra_process_comms' : True}]
+[servo_node_main-4] to the Servo composable node in the launch file
+[ros2_control_node-1] [INFO] [1726426857.152682560] [controller_manager]: Successful set up FIFO RT scheduling policy with priority 50.
+[servo_node_main-4] [INFO] [1726426857.188586332] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.0340458 seconds
+[servo_node_main-4] [INFO] [1726426857.188700513] [moveit_robot_model.robot_model]: Loading robot model 'gen3'...
+[servo_node_main-4] [INFO] [1726426857.188715387] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[component_container_mt-5] [INFO] [1726426857.349831318] [moveit_servo_demo_container]: Load Library: /opt/ros/humble/lib/librobot_state_publisher_node.so
+[component_container_mt-5] [INFO] [1726426857.355479142] [moveit_servo_demo_container]: Found class: rclcpp_components::NodeFactoryTemplate<robot_state_publisher::RobotStatePublisher>
+[component_container_mt-5] [INFO] [1726426857.355563067] [moveit_servo_demo_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<robot_state_publisher::RobotStatePublisher>
+[component_container_mt-5] [INFO] [1726426857.402955480] [robot_state_publisher]: got segment base_link
+[component_container_mt-5] [INFO] [1726426857.403159063] [robot_state_publisher]: got segment bracelet_link
+[component_container_mt-5] [INFO] [1726426857.403175442] [robot_state_publisher]: got segment end_effector_link
+[component_container_mt-5] [INFO] [1726426857.403181548] [robot_state_publisher]: got segment forearm_link
+[component_container_mt-5] [INFO] [1726426857.403187340] [robot_state_publisher]: got segment half_arm_1_link
+[component_container_mt-5] [INFO] [1726426857.403193085] [robot_state_publisher]: got segment half_arm_2_link
+[component_container_mt-5] [INFO] [1726426857.403198424] [robot_state_publisher]: got segment robotiq_85_base_link
+[component_container_mt-5] [INFO] [1726426857.403204624] [robot_state_publisher]: got segment robotiq_85_left_finger_link
+[component_container_mt-5] [INFO] [1726426857.403210159] [robot_state_publisher]: got segment robotiq_85_left_finger_tip_link
+[component_container_mt-5] [INFO] [1726426857.403215593] [robot_state_publisher]: got segment robotiq_85_left_inner_knuckle_link
+[component_container_mt-5] [INFO] [1726426857.403221194] [robot_state_publisher]: got segment robotiq_85_left_knuckle_link
+[component_container_mt-5] [INFO] [1726426857.403226745] [robot_state_publisher]: got segment robotiq_85_right_finger_link
+[component_container_mt-5] [INFO] [1726426857.403231933] [robot_state_publisher]: got segment robotiq_85_right_finger_tip_link
+[component_container_mt-5] [INFO] [1726426857.403237513] [robot_state_publisher]: got segment robotiq_85_right_inner_knuckle_link
+[component_container_mt-5] [INFO] [1726426857.403242670] [robot_state_publisher]: got segment robotiq_85_right_knuckle_link
+[component_container_mt-5] [INFO] [1726426857.403247930] [robot_state_publisher]: got segment shoulder_link
+[component_container_mt-5] [INFO] [1726426857.403253368] [robot_state_publisher]: got segment spherical_wrist_1_link
+[component_container_mt-5] [INFO] [1726426857.403259012] [robot_state_publisher]: got segment spherical_wrist_2_link
+[component_container_mt-5] [INFO] [1726426857.403264151] [robot_state_publisher]: got segment world
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/robot_state_publisher' in container '/moveit_servo_demo_container'
+[component_container_mt-5] [INFO] [1726426857.412629055] [moveit_servo_demo_container]: Load Library: /opt/ros/humble/lib/libstatic_transform_broadcaster_node.so
+[component_container_mt-5] [INFO] [1726426857.413802633] [moveit_servo_demo_container]: Found class: rclcpp_components::NodeFactoryTemplate<tf2_ros::StaticTransformBroadcasterNode>
+[component_container_mt-5] [INFO] [1726426857.413874339] [moveit_servo_demo_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<tf2_ros::StaticTransformBroadcasterNode>
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/static_tf2_broadcaster' in container '/moveit_servo_demo_container'
+[component_container_mt-5] [ERROR] [1726426857.424905974] [moveit_servo_demo_container]: Failed to find class with the requested plugin name 'moveit_servo_kinova::JoyToServoPub' in the loaded library
+[ERROR] [launch_ros.actions.load_composable_nodes]: Failed to load node 'controller_to_servo_node' of type 'moveit_servo_kinova::JoyToServoPub' in container '/moveit_servo_demo_container': Failed to find class with the requested plugin name.
+[component_container_mt-5] [INFO] [1726426857.431213419] [moveit_servo_demo_container]: Load Library: /opt/ros/humble/lib/libjoy.so
+[component_container_mt-5] [INFO] [1726426857.450660298] [moveit_servo_demo_container]: Found class: rclcpp_components::NodeFactoryTemplate<joy::Joy>
+[component_container_mt-5] [INFO] [1726426857.450843748] [moveit_servo_demo_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<joy::Joy>
+[ros2_control_node-1] [INFO] [1726426857.564960097] [controller_manager]: Loading controller 'joint_trajectory_controller'
+[ros2_control_node-1] [WARN] [1726426857.577301809] [joint_trajectory_controller]: [Deprecated]: "allow_nonzero_velocity_at_trajectory_end" is set to true. The default behavior will change to false.
+[ros2_control_node-1] [INFO] [1726426857.581464237] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[component_container_mt-5] [INFO] [1726426857.605843150] [joy_node]: Opened joystick: Xbox Series X Controller.  deadzone: 0.050000
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/joy_node' in container '/moveit_servo_demo_container'
+[spawner-2] [INFO] [1726426857.613922245] [spawner_joint_state_broadcaster]: Loaded joint_state_broadcaster
+[ros2_control_node-1] [INFO] [1726426857.616431020] [controller_manager]: Configuring controller 'joint_state_broadcaster'
+[ros2_control_node-1] [INFO] [1726426857.616724898] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+[spawner-3] [INFO] [1726426857.622983063] [spawner_joint_trajectory_controller]: Loaded joint_trajectory_controller
+[ros2_control_node-1] [INFO] [1726426857.625091757] [controller_manager]: Configuring controller 'joint_trajectory_controller'
+[ros2_control_node-1] [INFO] [1726426857.625532067] [joint_trajectory_controller]: No specific joint names are used for command interfaces. Using 'joints' parameter.
+[ros2_control_node-1] [INFO] [1726426857.625711382] [joint_trajectory_controller]: Command interfaces are [position velocity] and state interfaces are [position velocity].
+[ros2_control_node-1] [INFO] [1726426857.625773831] [joint_trajectory_controller]: Using 'splines' interpolation method.
+[ros2_control_node-1] [INFO] [1726426857.626548293] [joint_trajectory_controller]: Controller state will be published at 100.00 Hz.
+[ros2_control_node-1] [INFO] [1726426857.629895220] [joint_trajectory_controller]: Action status changes will be monitored at 20.00 Hz.
+[spawner-2] [INFO] [1726426857.638089626] [spawner_joint_state_broadcaster]: Configured and activated joint_state_broadcaster
+[spawner-3] [INFO] [1726426857.640428868] [spawner_joint_trajectory_controller]: Configured and activated joint_trajectory_controller
+[servo_node_main-4] [INFO] [1726426857.823875485] [moveit_ros.current_state_monitor]: Listening to joint states on topic '/joint_states'
+[servo_node_main-4] [INFO] [1726426857.827475231] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[servo_node_main-4] [INFO] [1726426857.827505903] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[servo_node_main-4] [INFO] [1726426857.828244557] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/planning_scene'
+[servo_node_main-4] [INFO] [1726426857.828266184] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[servo_node_main-4] [INFO] [1726426857.828567636] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'collision_object'
+[servo_node_main-4] [INFO] [1726426857.828878632] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[servo_node_main-4] [WARN] [1726426857.830645876] [moveit.ros.occupancy_map_monitor.middleware_handle]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[servo_node_main-4] [ERROR] [1726426857.830692194] [moveit.ros.occupancy_map_monitor.middleware_handle]: No 3D sensor plugin(s) defined for octomap updates
+[INFO] [spawner-2]: process has finished cleanly [pid 263531]
+[INFO] [rviz2-6]: process started with pid [263641]
+[INFO] [spawner-3]: process has finished cleanly [pid 263533]
+[rviz2-6] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-developer'
+[servo_node_main-4] [INFO] [1726426858.137139120] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Publishing maintained planning scene on '/servo_node/publish_planning_scene'
+[rviz2-6] [INFO] [1726426858.612460684] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-6] [INFO] [1726426858.612729539] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-6] [INFO] [1726426858.633516470] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-6] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occurred with plugin factory for class rviz_default_plugins::displays::InteractiveMarkerDisplay. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+[rviz2-6]          at line 253 in /opt/ros/humble/include/class_loader/class_loader/class_loader_core.hpp
+[rviz2-6] [ERROR] [1726426861.787239000] [moveit_ros_visualization.motion_planning_frame]: Action server: /recognize_objects not available
+[rviz2-6] [INFO] [1726426862.039620815] [moveit_rdf_loader.rdf_loader]: Loaded robot model in 0.0297617 seconds
+[rviz2-6] [INFO] [1726426862.039720678] [moveit_robot_model.robot_model]: Loading robot model 'gen3'...
+[rviz2-6] [INFO] [1726426862.039741953] [moveit_robot_model.robot_model]: No root/virtual joint specified in SRDF. Assuming fixed joint
+[rviz2-6] [WARN] [1726426862.178793913] [moveit_ros.robot_model_loader]: No kinematics plugins defined. Fill and load kinematics.yaml!
+[rviz2-6] [INFO] [1726426862.492529503] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Starting planning scene monitor
+[rviz2-6] [INFO] [1726426862.494184741] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Listening to '/monitored_planning_scene'
+[rviz2-6] [INFO] [1726426880.939116424] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Stopping planning scene monitor
+[INFO] [rviz2-6]: process has finished cleanly [pid 263641]
+^C[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[ros2_control_node-1] [INFO] [1726426902.132622800] [rclcpp]: signal_handler(signum=2)
+[servo_node_main-4] [INFO] [1726426902.132623395] [rclcpp]: signal_handler(signum=2)
+[component_container_mt-5] [INFO] [1726426902.132656628] [rclcpp]: signal_handler(signum=2)
+[servo_node_main-4] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[servo_node_main-4]          at line 127 in ./src/class_loader.cpp
+[servo_node_main-4] [INFO] [1726426902.173863892] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Stopped publishing maintained planning scene.
+[servo_node_main-4] [INFO] [1726426902.175282710] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Stopping world geometry monitor
+[servo_node_main-4] [INFO] [1726426902.176410724] [moveit_ros.planning_scene_monitor.planning_scene_monitor]: Stopping planning scene monitor
+[INFO] [servo_node_main-4]: process has finished cleanly [pid 263535]
+[INFO] [component_container_mt-5]: process has finished cleanly [pid 263537]
+[INFO] [ros2_control_node-1]: process has finished cleanly [pid 263529]
